@@ -30,4 +30,5 @@ jobs:
         with:
           aws-region: us-east-2
           role-to-assume: arn:aws:iam::187004426432:role/fem-cicd-service
+          audience: sts.amazonaws.com
       - run: aws s3 sync dist/ s3://splatz-fem-cicd-service/ --delete
